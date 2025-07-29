@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OnlineBookBuyingAndSellingPortal</title>
+<link rel="stylesheet" href="user_login_register.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style type="text/css">
+.nav a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    padding-right:250px;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<nav class = "nav">
+		<a href="#" style="color: black;" onclick="window.history.back();"><i class="fa-solid fa-circle-arrow-left"></i></a>
+		<div class = "nav-logo">
+			<p class="logo1">BOOK</p>	 
+			<p class="logo2">STORE</p> 
+		</div>
+		<div class="nav-button">
+		 	<button class="btn white-btn" id="loginBtn" onclick="login()">Sign In </button>
+		 	<button class="btn" id="registerBtn" onclick="register()">Sign Up </button>
+		</div>
+</nav>
+  <div class="wrapper">
+	
+<!--------------------------------- Form box--------------------------------->	
+	
+	<div class="form-box">
+	      
+	     <!-- --------------Login form--------------------------------- -->
+	    <form action="loginForm" onsubmit="return validateUserLoginEmailPass()" method="post" class="login-container" id="login" >
+	     	<div class="top">
+	     		<span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+	     		<header>UserLogin</header>
+	     	</div>
+	     	<div class="input-box">
+	     				<input type="text" class="input-field" id="email1" name="email1" placeholder="Email address" required>
+	     				<i class="fa-regular fa-envelope"></i>
+	        </div>
+	        <div class="input-box">
+	     				<input type="password" class="input-field" id="pass1" name="pass1" placeholder="Password" required>
+	     				<i class="fa-solid fa-lock"></i>
+	     	</div>
+	     	<div class="input-box-login">
+	     				<input type="submit" class="submit" value="Login">
+	     	</div>
+	     	<div class="two-col">
+	     		<div class="two">
+	     			<label><a href="sendOTP.html">Forgot password?</a></label>
+	     		</div>
+	     	
+	     	</div>
+	    </form>
+	     
+	    <!-- --------------Registration form--------------------------------- -->
+	    <form  action="regForm" onsubmit="return validateUserRegistration()" method="post" class="register-container" id="register">
+	     	<div class="top">
+	     		<span>Have an account? <a href="#" onclick="login()">Login</a></span>
+	     		<header>UserRegistration</header>
+	     	</div>
+	     	<div class = "two-forms">
+	     		<div class="input-box">
+	     				<input type="text" class="input-field" name="name1" placeholder="First Name" required>
+	     				<i class="fa-solid fa-circle-user"></i>
+	     		 </div>
+	     		 <div class="input-box">
+	     				<input type="text" class="input-field" name="name2" placeholder="Last Name" required>
+	     				<i class="fa-solid fa-circle-user"></i>
+	     		 </div>
+	     	</div>
+	     	<div class="input-box">
+	     				<input type="text" class="input-field" id="Remail" name="email1" placeholder="Email" required>
+	     				<i class="fa-regular fa-envelope"></i>
+	     				
+	        </div>
+	        <button onclick="sendOTPEmailVerify()" id="verifyEmail" class="verifyEmail">Verify Email</button>
+	        <div class="otpverify"> 
+				<input type="text" id="otp_inp" placeholder="Enter the OTP sent to your Email..."> 
+				<button  class="Verify" id="otp-btn">Verify</button> 
+			</div>  
+	        <div class="input-box-detail" id="input-box-detail">
+	     				<input type="tel" class="input-field" id="phoneNo" name="phoneno" placeholder="Phone no." required>
+	     				<i class="fa-solid fa-square-phone"></i>
+	     	</div>
+		    
+	        <div class="input-box-detail" id="input-box-detail">
+	     			<select class="input-field" name="gender" required>
+	     				<option>Select gender</option>
+	     				<option>Male </option>
+	     				<option>Female</option>
+	     				<option>Others</option>
+	     			</select>
+	     			<i class="fa-solid fa-person-half-dress"></i>
+	        </div>
+	        <div class="input-box-detail" id="input-box-detail">
+	     			<input type="text" class="input-field" name="city" placeholder="City" required>
+	     			<i class="fa-solid fa-location-dot"></i>
+	        </div>
+	        <div class="input-box-detail" id="input-box-detail">
+	     				<input type="password" class="input-field" id="Rpass1" name="pass1" placeholder="Password" required>
+	     				<i class="fa-solid fa-lock"></i>
+	     	</div>
+	     	<div class="input-box-detail" id="input-box-detail">
+	     				<input type="password" class="input-field" id="Rpass2" name="pass2" placeholder="Confirm Password" required>
+	     				<i class="fa-solid fa-lock"></i>
+	     	</div>
+	     	<div  id="submitRegisterBtn">
+	     				<input type="submit" class="submit" value="Register">
+	     	</div>
+	    </form>
+	</div>
+ </div>
+ <div class="footer">
+	 <h2 class="footeradd">Address</h2>
+	 <hr class = whiteline>
+	 <p class = address>IN</p>
+	 <p class = address>(+91)9382185056</p>
+	 <p class = address>bookstore6825@gmail.com<p>
+	 <!-- <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+      </div> -->
+
+        <div class="footer-links">
+            <a href="#">Sign In</a>
+            <a href="#">Sign Up</a>
+        </div>
+ </div>
+ 
+ <script type="text/javascript">
+ 	var a = document.getElementById("loginBtn");
+ 	var b = document.getElementById("registerBtn");
+ 	var x = document.getElementById("login");
+ 	var y = document.getElementById("register");
+ 	var ad = document.getElementById("adminBtn");
+ 	var us = document.getElementById("userBtn");
+ 	
+ 	var testEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	var testPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!]).{8,}$/;
+	var phoneRegex = /^[6-9]\d{9}$/;
+ 	
+ 	function login() {
+ 		x.style.left = "4px";
+ 		y.style.left = "540px"
+ 		a.className += " white-btn";
+ 		b.className = "btn";
+ 		x.style.opacity = 1;
+ 		y.style.opacity = 0;
+	}
+ 	function register() {
+ 		x.style.left = "540px";
+ 		y.style.left = "4px"	
+ 		a.className = "btn";
+ 		b.className += " white-btn";
+ 		x.style.opacity = 0;
+ 		y.style.opacity = 1;
+	}
+ 	
+ 	function validateUserLoginEmailPass() {
+ 		
+ 		var email = document.getElementById("email1").value;
+ 		var pass = document.getElementById("pass1").value;
+ 		
+ 		
+ 		if(!testEmail.test(email))
+ 		 {
+ 			alert("Invalid Email Address");
+ 			return false;
+ 		 }
+ 		if(!testPass.test(pass))
+ 		 {
+ 			 alert("❌ Password must contain:\n- Min 8 characters\n- At least 1 uppercase letter\n- At least 1 lowercase letter\n- At least 1 digit\n- At least 1 special character");
+ 	         return false;
+ 		 }
+ 	}
+ 	
+ 	function validateUserRegistration() {
+ 		
+ 		var email = document.getElementById("Remail").value;
+ 		var password = document.getElementById("Rpass1").value;
+ 		var confirmPassword = document.getElementById("Rpass2").value;
+ 		var phoneNo = document.getElementById("phoneNo").value;
+ 		
+ 		if(!testEmail.test(email))
+		 {
+			alert("Invalid Email Address");
+			return false;
+		 }
+ 		 if (!phoneRegex.test(phoneNo)) {
+             alert("❌ Invalid Phone Number. It must be 10 digits and start with 6, 7, 8, or 9");
+             return false;
+         }
+		if(!testPass.test(password))
+		 {
+			 alert("❌ Password must contain:\n- Min 8 characters\n- At least 1 uppercase letter\n- At least 1 lowercase letter\n- At least 1 digit\n- At least 1 special character");
+	         return false;
+		 }
+		if(password !== confirmPassword)
+			{
+			alert("❌ Password and Confirm Password do not match");
+			return false;
+			}
+ 		return true;
+ 		
+	}
+ 	
+ 	
+ 	
+</script>
+<script src="script.js"></script> 
+</body>
+</html>

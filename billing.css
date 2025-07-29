@@ -1,0 +1,205 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.nav-bar{
+ display:flex;
+ background: rgba(245, 0, 10, 0.8);
+ align-items:center;
+ justify-content: space-between;
+ width:100%;
+ height: 80px;
+}
+.nav-bar a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.logo{
+  text-align: center;
+  flex-grow: 1;
+}
+.logo1{
+
+ font-size: 25px;
+ font-weight: 500;
+ color: white;
+}
+.logo2{
+ font-size: 25px;
+ font-weight: 700;
+ 
+}
+.top{
+ height: 90px;
+ display:flex;
+ justify-content:flex-start;
+ background: rgba(0, 0, 0, 0.15);
+}
+.top header{
+    color: black;
+	font-size: 35px;
+	align-self:center;
+	font-weight: 700;
+	margin-left: 150px;
+}
+.redline {
+	border: 3px solid red;
+}
+.headding{
+display: flex;
+justify-content: space-around;
+margin-bottom: 10px;
+}
+
+.headding h3{
+  margin-top: 20px;
+
+}
+.book-list {
+  			margin-top:10px;
+ 			display: flex;
+ 			justify-content: space-around;
+            
+        }
+        .book-item {
+            display: inline-flex;
+        }
+        .book-item img {
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .book-item .bookName {
+            margin-left:10px;
+            font-family:arial;
+            font-size:12px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .bookName p{
+            font-size:10px;
+            font-family:arial;
+        }
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: red;
+        }
+        .sellerName{
+        font-size: 20px;
+        font-weight: 300;
+        }
+       .billing-form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+       }
+        
+      .billing-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 800px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+   .billing-container h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+   .billing-container .pay{
+    padding: 5px;
+    width:150px;
+    margin-left: 635px;
+    border-radius: 5px;
+    justify-content:space-around;
+    background: blue;
+    color: white;
+   }
+
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      flex-direction:column;
+      margin-bottom: 15px;
+      width: 400px;
+    }
+
+    .form-group label {
+      flex: 1;
+      font-weight: 600;
+      padding: 10px;
+    }
+
+    .form-group input {
+      flex: 2;
+      padding: 10px;
+      border: none;
+      background-color: #f0dff0;
+      border-radius: 6px;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+    
+ .footer{
+	margin-top:100px;
+	background-color: black;
+	height: 300px;
+	width: 100%;
+	align-items: center;
+	display:flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.footeradd {
+	color: white;
+	align-items: center;
+	padding-top: 40px;
+	padding-bottom:5px;
+	font-family: Arial;
+	font-weight: 100;
+	font-size: 30px;
+	/*display: block;
+	width: 33.3%;
+	margin: 12px auto;
+	margin-top: 80px;
+	margin-left: 550px;*/
+}
+
+.whiteline {
+	color: white;
+	width: 700px;
+	margin-bottom: 20px;
+}
+.address{
+	padding-top:10px;
+	display: flex;
+	align-items: center;
+	color: white;
+	font-family: Arial;
+	font-weight: 100;
+}
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 25px;
+}

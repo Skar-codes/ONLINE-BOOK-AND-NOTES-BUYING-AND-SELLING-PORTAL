@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OnlineBookBuyingAndSellingPortal</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+ 	  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+  	  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style type="text/css">
+*{
+  margin: 0;
+	padding: 0;
+ box-sizing: border-box;
+ font-family: 'hoppins', sans-serif;
+}
+.nav-bar{
+ display:flex;
+ background: rgba(245, 0, 10, 0.8);
+ align-items:center;
+ justify-content: space-between;
+ width:100%;
+ height: 80px;
+}
+.nav-bar a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.logo{
+  text-align: center;
+  flex-grow: 1;
+}
+.logo1{
+
+ font-size: 25px;
+ font-weight: 500;
+ color: white;
+}
+.logo2{
+ font-size: 25px;
+ font-weight: 700;
+ 
+}
+.formBox{
+display: flex;
+height: 90vh;
+width: 100%;
+text-align: center;
+justify-content: center;
+
+}
+.form{
+width:500px;
+align-self:center;
+background-color: #eeeeee;
+padding: 15px 30px;
+display: grid;
+gap: 20px;
+padding-bottom: 30px;
+}
+input {
+	width: 100%;
+	padding: 10px;
+}
+.otpverify{
+width: 100%;
+display:none ;
+gap:20px;
+}
+#resend{
+  display: none;
+}
+.btn{
+padding: 10px;
+background-color: #82eec1;
+outline: none;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+width: 150px;
+}
+.btn:hover {
+	background: rgba(0, 255, 0, 0.22);
+}
+ .footer{
+    position:absolute;
+	background-color: black;
+	height: 300px;
+	width: 100%;
+	align-items: center;
+	display:flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+.footeradd {
+	color: white;
+	align-items: center;
+	padding-top: 40px;
+	padding-bottom:5px;
+	font-family: Arial;
+	font-weight: 100;
+	font-size: 30px;
+}
+
+.whiteline {
+	color: white;
+	width: 700px;
+	margin-bottom: 20px;
+}
+.address{
+	padding-top:10px;
+	display: flex;
+	align-items: center;
+	color: white;
+	font-family: Arial;
+	font-weight: 100;
+}
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 25px;
+}
+      
+
+</style>
+</head>
+<body>
+ <div class="nav-bar">
+    <a href="#" style="color: black;" onclick="window.history.back();"><i class="fa-solid fa-circle-arrow-left"></i></a>
+    <div class="logo">
+  		<span class="logo1">BOOK </span>
+  		<span class="logo2">STORE</span>
+  	</div>
+ </div>
+ <div class="formBox">
+	 <div class="form"> 
+	
+		<h1>Reset Password</h1> 
+		<input type="email" id="email" placeholder="Enter Email..."> 
+		<div class="otpverify"> 
+			<input type="text" id="otp_inp" placeholder="Enter the OTP sent to your Email..."> 
+			<button  class="btn" id="otp-btn">Verify</button> 
+		</div>  
+		<button onclick="sendOTPResetPassword()"  class="btn" id="resend">Resend OTP</button> 
+		<button onclick="sendOTPResetPassword()"  class="btn" id="send">Send OTP</button> 
+	  </div> 
+ </div>
+ <div class="footer">
+		 <h2 class="footeradd">Address</h2>
+		 <hr class = whiteline>
+		 <p class = address>IN</p>
+		 <p class = address>(+91)9382185056</p>
+		 <p class = address>bookstore6825@gmail.com<p>
+		<!--  <div class="social-icons">
+	            <a href="#"><i class="fa-brands fa-facebook" ></i></a>
+	            <a href="#"><i class="fab fa-whatsapp"></i></a>
+	            <a href="#"><i class="fab fa-twitter"></i></a>
+	            <a href="#"><i class="fab fa-instagram"></i></a>
+	      </div> -->
+ </div> 
+<script src="script.js"></script> 
+</body>
+
+</html>

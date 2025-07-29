@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OnlineBookBuyingAndSellingPortal</title>
+<link rel="stylesheet" href="adminLogin.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+<div class="nav-bar">
+    <a href="#" style="color: black;" onclick="window.history.back();"><i class="fa-solid fa-circle-arrow-left"></i></a>
+    <div class="logo">
+  		<span class="logo1">BOOK </span>
+  		<span class="logo2">STORE</span>
+  	</div>
+ </div>
+<div class="wrapper">
+	
+<!--------------------------------- Form box--------------------------------->	
+	
+	<div class="form-box">
+	     
+	     <!-- --------------Login form--------------------------------- -->
+	    <form onsubmit="return validateEmailPass()" action="adloginForm" method="post" class="login-container" id="login">
+	     	<div class="top">
+	     		<header>AdminLogin</header>
+	     	</div>
+	     	<div class="input-box">
+	     				<input type="text" class="input-field" id="email1" name="email1" placeholder="Email address" required>
+	     				<i class="fa-regular fa-envelope"></i>
+	        </div>
+	        <div class="input-box">
+	     				<input type="password" class="input-field" id="pass1" name="pass1" placeholder="Password" required>
+	     				<i class="fa-solid fa-lock"></i>
+	     	</div>
+	     	<div class="input-box-login">
+	     				<input type="submit" class="submit" value="Login">
+	     	</div>
+	    </form>
+	     
+	</div>
+ </div>
+ <div class="footer">
+	 <h2 class="footeradd">Address</h2>
+	 <hr class = whiteline>
+	 <p class = address>IN</p>
+	 <p class = address>(+91)9382185056</p>
+	 <p class = address>bookstore6825@gmail.com<p>
+	<!--  <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>--> 
+ </div>
+<script type="text/javascript">
+  
+
+function validateEmailPass() {
+	
+	var email = document.getElementById("email1").value;
+	var pass = document.getElementById("pass1").value;
+	var testEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	var testPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!]).{8,}$/;
+	
+	if(!testEmail.test(email))
+	 {
+		alert("Invalid Email Address");
+		return false;
+	 }
+	if(!testPass.test(pass))
+	 {
+		 alert("❌ Password must contain:\n- Min 8 characters\n- At least 1 uppercase letter\n- At least 1 lowercase letter\n- At least 1 digit\n- At least 1 special character");
+         return false;
+	 }
+}
+</script>
+</body>
+</html>
